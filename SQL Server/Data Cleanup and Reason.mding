@@ -10,7 +10,7 @@ max("Pressure_PSI") AS maximum_psi, round(avg("Pressure_PSI")) AS average_psi, c
 
 FROM injection1214
 
-		WHERE "Pressure_PSI">5
-		AND "Volume_BPD">100
-		AND "Directive_Status" != 'NOT AN ARBUCKLE WELL'
-		GROUP BY api, latitude, longitude
+	WHERE "Pressure_PSI">5
+	AND "Volume_BPD">100
+	AND "Directive_Status" != 'NOT AN ARBUCKLE WELL'
+	GROUP BY api, latitude, longitude
