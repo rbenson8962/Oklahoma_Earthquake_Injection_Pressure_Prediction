@@ -5,19 +5,5 @@ I'm looking for when the Arbuckle began to "fill up" as the system reached equil
 
 For some background, a fault does not move all at once. They act more like a millipede where slippage occurs along the plane in isolated locations but are still part of a mechanical ecosystem. A slippage at point A will create increased stress at Point B and C. If point C can't handle the additional stress over time, it slips as well, increasing stress at point B even further. Point B can't handle the double stress increase and slips as well creating new stress at a point D etc etc.
 
+My hypothesis is that there will be a positive correlation between Arbuckle formation pressures and northern Oklahoma seismicity.
 
-
-SELECT api, sum("Volume_BPD") AS total_volume, min("Pressure_PSI") AS minimum_psi, 
-max("Pressure_PSI") AS maximum_psi, round(avg("Pressure_PSI")) AS average_psi, count("Volume_BPD") AS total_well_reports,
-"Latitude" AS latitude, "Longitude" as longitude
-
-FROM Injection1214
-
-		WHERE "Pressure_PSI">5
-		AND "Volume_BPD">100
-		AND "Directive_Status" != 'NOT AN ARBUCKLE WELL'
-		GROUP BY api, latitude, longitude
-
-This is my SQL code to clean the data up. I'm excluding erroneous data points (-999 table values) and low volume injectors (volume_BPD > 100).
-
-Additionally, I'm not interested in PSI values of less than 5. The Arbuckle formation was favored as an injection zone because it was a vacuum allowing limitless injection volumes. Due to this negative pressure, values of 0 psi are not uncommon.
