@@ -2,15 +2,15 @@ Below is my SQL code to clean the raw data up. I'm excluding erroneous data poin
 
 CREATE TABLE arbk_inject AS  
 
-SELECT 
+	SELECT 
 
-api, sum("Volume_BPD") AS total_volume, min("Pressure_PSI") AS minimum_psi, 
-max("Pressure_PSI") AS maximum_psi, round(avg("Pressure_PSI")) AS average_psi, count("Volume_BPD") AS total_well_reports,
-"Latitude" AS latitude, "Longitude" as longitude 
+	api, sum("Volume_BPD") AS total_volume, min("Pressure_PSI") AS minimum_psi, 
+	max("Pressure_PSI") AS maximum_psi, round(avg("Pressure_PSI")) AS average_psi, 
+	count("Volume_BPD") AS 	total_well_reports,"Latitude" AS latitude, "Longitude" as longitude 
 
-FROM injection1214
+	FROM injection1214
 
-	WHERE "Pressure_PSI">5
-	AND "Volume_BPD">100
-	AND "Directive_Status" != 'NOT AN ARBUCKLE WELL'
-	GROUP BY api, latitude, longitude
+		WHERE "Pressure_PSI">5
+		AND "Volume_BPD">100
+		AND "Directive_Status" != 'NOT AN ARBUCKLE WELL'
+		GROUP BY api, latitude, longitude
