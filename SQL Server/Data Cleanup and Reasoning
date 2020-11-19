@@ -1,6 +1,6 @@
 Below is my SQL code to clean the raw data up. I'm excluding erroneous data points (-999 table values) and low volume injectors (volume_BPD > 100).  Most importantly, I am not interested in PSI values less than 5 (WHERE "Pressure_PSI">5).  The mechanical reasoning for this is because the Arbuckle formation was underpressured.  This mechanic caused a vacuum effect where it drank enormous amounts of fluid and pressure readings were 0.  This investigation is focused on when the Arbuckle began to push back as it reached saturation, and eventually, oversaturation as injection volumes exploded between 2012 and 2014.  
 
-CREATE TABLE arbk_inject AS 
+CREATE TABLE arbk_inject AS  
 
 SELECT 
 
