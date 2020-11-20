@@ -1,8 +1,7 @@
 # WORK IN PROGRESS 11/20/2020
 # Investigating the Relationships between the Arbuckle Formation Injection Pressures and Induced Seismicity
 
-During my career as a geophysicist I was apart of operations that were causing induced seismicity in Norther Oklahoma.  We were actively encouraged to practice willfull ignorance on this top where even muttering the word "Earthquake" could cause silence in a room.  Don't think about it, don't mention it, don't do ANYTHING that could be used by a lawyer as evidence that the company knew what was going on.  They bent over backwards to find anything to explain it away.  I once sat through a small presentation where a Manager showed that the moon was causing seismic tides.  Rediculous on so many levels!  It got so bad, company access to our own internal geophone arrays were restricted and locked away.  
-
+During my career as a geophysicist I was apart of operations that were concerned about induced seismicity in Norther Oklahoma.  
 Insert GRAPHIC HERE of OK Earthquakes over time
 
 This investigation is the 2nd piece of my self directed research from that time.  It's the project that I didn't get to before our big layoff and is the perfect project for me to practice and transition into a Data Science career.
